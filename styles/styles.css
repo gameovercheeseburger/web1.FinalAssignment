@@ -4,6 +4,8 @@ body {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    align-items: center;
+    justify-content: 100vh;
 }
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
@@ -150,6 +152,17 @@ footer {
 #index-page .fake-button {
     width: 250px;
     margin-right: 150px;
+    margin: 100px;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.flex a.fake-button.large-text + a.fake-button.large-text {
+    margin-left: 150px; 
 }
 
 /************* bookings page *************/
@@ -164,16 +177,21 @@ footer {
     - any element tagged with the .clicked class will turn mustard yellow. **This will be very important for your JavaScript.**
     - all items within the page will be centered within their available space.
 */
-#bookings-page {
+.booking-page {
     width: 600px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bookings-page p {
     font-size: 18px;
 }
 
-#bookings-page .day-selector {
+.day-selector {
     margin-bottom: 12px;
 }
 
@@ -195,26 +213,34 @@ footer {
     align-items: center;
 }
 
-#bookings-page .small-button {
+.small-button {
     border: 1px solid black;
     margin-bottom: 24px;
     padding: 5px;
     cursor: pointer;
+    display: inline-block;
 }
 
-#bookings-page .top-margin {
+.top-margin {
     margin-top: 24px;
     margin-bottom: 12px;
 }
 
-#bookings-page .clear-days-button {
+.clear-days-button {
     width: 200px;
     cursor: pointer;
 }
 
-#bookings-page .clicked {
+.clicked {
     background-color: #E5AF42;
 }
+
+.flex.day-selector li{
+    margin-right: 40px;
+    border: 1px solid black;
+    border-radius: auto;
+}
+
 
 /************* contact page *************/
 /* TO DO:
@@ -254,3 +280,40 @@ footer {
     border: 1px solid black;
     margin-bottom: 24px;
 }
+#contact-page {
+    height: 420px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.flex label {
+    width: 150px;
+    text-align: right;
+    margin-right: 24px;
+}
+
+.flex input,
+.flex textarea {
+    flex: 1; 
+    font-family: 'Montserrat', sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.flex textarea {
+    height: 150px;
+}
+
+.fake-button.blue-hover {
+    width: 450px;
+}
+
