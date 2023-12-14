@@ -5,7 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     align-items: center;
-    justify-content: 100vh;
+    justify-content: center;
 }
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
@@ -238,7 +238,7 @@ img {
 .flex.day-selector li{
     margin-right: 40px;
     border: 1px solid black;
-    border-radius: auto;
+    border-radius: 10px;
 }
 
 
