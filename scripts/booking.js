@@ -17,18 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if(numberOfDaysSelected > 0)
         {
             totalCost = dailyRate * numberOfDaysSelected;
-            console.log(totalCost)
         }
         else
         {
             totalCost = 0;
-            console.log("it went to else", totalCost)
-            document.getElementById('calculated-cost').innerHTML = 0
+            document.getElementById('calculated-cost').innerHTML = 0;
         }
-        console.log(numberOfDaysSelected)
-        console.log(totalCost)
-        console.log(numberOfDaysSelected)
-        document.getElementById('calculated-cost').innerHTML = totalCost
+        document.getElementById('calculated-cost').innerHTML = totalCost;
         
     }
 
