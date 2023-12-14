@@ -41,11 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!dayElement.classList.contains('clicked') && validDaysOfWeek.includes(dayOfWeek)) { // i put this validation because when clear is clicked the numberof day selecter returns 1 reference geeksforgeeks
             dayElement.classList.add('clicked');
             numberOfDaysSelected += 1;
-            clickedDays.push(dayId); // store the ID of the clicked day 
+            clickedDays.push(dayId); // store the ID of the clicked day https://www.geeksforgeeks.org/javascript-array-push-method/
         }
     
         updateCost();
     }
+    //https://www.geeksforgeeks.org/javascript-string-methods/
     function getDayOfWeek(dayId) {
         const parts = dayId.split('-');
         if (parts.length > 1) {
@@ -56,7 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function clearDays() {
         const clickedDays = document.querySelectorAll('.blue-hover.clicked');
-        clickedDays.forEach(day => day.classList.remove('clicked'));
+        clickedDays.forEach(day => {
+            if (!day.classList.contains('small-button')) { // Exclude full/half buttons
+                day.classList.remove('clicked');
+            }
+        });
         numberOfDaysSelected = 0;
         updateCost();
     }
